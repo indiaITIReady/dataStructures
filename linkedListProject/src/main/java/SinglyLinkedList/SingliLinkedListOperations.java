@@ -39,6 +39,13 @@ public class SingliLinkedListOperations {
 		} while (headNode != null);
 	}
 
+	private void deleteNode(ListNode headNode, int data) {
+		
+		ListNode previousNode = headNode;
+		while(headNode != null || headNode.getData() != data) {
+			previousNode = headNode.getNext();
+		}
+	}
 	public static void main(String[] args) {
 		ListNode headNode = new ListNode(1);
 		SingliLinkedListOperations ops = new SingliLinkedListOperations();
